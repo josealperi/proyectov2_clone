@@ -9,5 +9,7 @@ jobs:
 steps:
   -name=Comrpobar código fuente
   uses:actions/checkout@v2
+run: echo ${{secrets.REPOSITORIO_SECRETO}}
+
 run:
   npm start test
