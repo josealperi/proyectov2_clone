@@ -1,0 +1,12 @@
+name: Workflow basico
+on:
+  push:
+    branches:["master"]
+jobs:
+  build:
+    runs-on:ubuntu-latest
+steps:
+  -name=Comrpobar código fuente
+  uses:actions/checkout@v2
+run:
+  npm start test
