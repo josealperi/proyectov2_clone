@@ -1,0 +1,14 @@
+name: Roolback
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'version para rollback'
+        required: true
+jobs:
+  rollback:
+    runs-on: ubuntu
+    steps:
+    - uses: actions/checkout@v2
+    - name: Rollback al inicio
+      run: ./rollback.sh
