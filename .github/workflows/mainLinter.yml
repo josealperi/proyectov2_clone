@@ -1,0 +1,9 @@
+name: Linter y Análisis
+on: [push]
+jobs:
+  lint:
+    runs-on: windows
+    steps: 
+    - uses: actions\checkout@v2
+    - name: Ejecutando ESLint
+      run: npm run lint
