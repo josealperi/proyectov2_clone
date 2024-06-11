@@ -1,0 +1,12 @@
+name: Deploy en Prod
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deply:
+    runs-on: windows
+    steps:
+    - uses: actions/checkout@v2
+    - name: Script de deplot en servidor de produccion
+      run: ./deployprod.sh
