@@ -1,0 +1,11 @@
+name: Report Cover
+on : [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: action/checkout@v2
+    - name: Coberutra de codigo
+      uses: codecov/cob-action@v2
+      with:
+        token: ${{secrets.TOKEN}}
