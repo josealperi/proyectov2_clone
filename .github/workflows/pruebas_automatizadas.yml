@@ -3,6 +3,9 @@ on: [push]
 jobs:
   test:
     runs-on:ubuntu-latest
+    
     steps:
-    - run:npm install
-    - run:npm test
+      with:
+        node-version:'14'
+    - run: npm install
+    - run: npm test
