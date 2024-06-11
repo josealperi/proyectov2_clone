@@ -6,10 +6,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-steps:
-  -name=Comrpobar código fuente
-  uses:actions/checkout@v2
-run: echo ${{secrets.REPOSITORIO_SECRETO}}
-
-run:
-  npm start test
+    steps:
+    - name: Comrpobar código fuente
+      uses: actions/checkout@v2
+    - run: echo ${{secrets.REPOSITORIO_SECRETO}}
+    - run: npm start test
