@@ -5,7 +5,5 @@ jobs:
     runs-on:ubuntu-latest
     
     steps:
-      with:
-        node-version:'14'
     - run: npm install
     - run: npm test
